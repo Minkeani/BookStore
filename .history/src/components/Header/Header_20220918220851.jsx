@@ -31,7 +31,7 @@ const Header = () => {
             <Link to="/agreement">Соглашение</Link>
           </li>
           <li>
-            <Link to="/support">Поддержка</Link>
+            <Link to="/">Поддержка</Link>
           </li>
           <li>
             <Link to="/bookBasket">
