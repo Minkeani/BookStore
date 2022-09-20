@@ -1,0 +1,45 @@
+.book-item {
+    text-decoration: none;
+    color: white;
+    width: 400px;
+    height: 350px;
+    background-color: rgb(36, 37, 41);
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.book-item:hover { 
+    box-shadow: 0 0 10px rgb(85, 88, 237);
+}
+
+.book-item {
+    margin-bottom: 30px;
+    margin-right: 50px;
+}
+
+.book-item__title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.book-item__genre {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-item__details{
+    padding: 10px 20px;
+}
+
+.book-item__description {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.book-item__buy {
+    position: absolute;
+    right: 0;
+    bottom: -12px;
+}
