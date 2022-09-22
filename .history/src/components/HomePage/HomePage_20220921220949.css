@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.container-home {
+    display: flex;
+    flex-direction: column;
+    color: white
+    /* margin-top: 20vh; */
+}
+
+.home-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.hide {
+    display: none
+}
+
+.container-home .view{
+    font-size: 24px;
+    cursor: pointer;
+    background: #007aff;
+    width: 50%;
+    margin-top: 30px;
+    align-self: center
+}
+
+.btn {
+    color: white;
+    font-size: 26px;
+    padding: 10px;
+    background: blue;
+    margin: 25px;
+}

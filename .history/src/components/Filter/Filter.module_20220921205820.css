@@ -1,0 +1,35 @@
+.Navigate {
+    background-color: #151d6b;
+    border-radius: 25px;
+    width: 300px;
+    margin: 50px;
+  }
+
+  .Navigate ul {
+    padding: 10px;
+  }
+  
+  .Navigate ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      border: 0.5px;
+      margin: 5px;
+      display: inline-block;
+      cursor: pointer;
+  }
+  
+    
+  .Navigate ul li:hover {
+    background-color: #353a84;
+    border-radius: 10px;
+}
+
+.active {
+    background-color: #545cc7;
+    border-radius: 10px;
+}
