@@ -1,0 +1,11 @@
+.book-buy__price {
+   
+    margin-right: 5px;
+}
+
+.book-buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

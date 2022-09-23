@@ -1,0 +1,20 @@
+.book {
+    /* background: url('../../img/book.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 15px;
+    font-size: 12px;
+    color: black */
+}
+
+.demoPage {
+    display: flex;
+    align-items:center;
+    border: 1px solid black;
+    background: white;
+    width: 80%;
+    margin: 10px;
+    justify-content: center;
+}

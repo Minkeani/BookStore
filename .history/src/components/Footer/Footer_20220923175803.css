@@ -1,0 +1,9 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 1px solid white;
+}
+
+.footer

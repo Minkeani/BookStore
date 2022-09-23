@@ -1,0 +1,17 @@
+.container-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    flex-direction: column
+}
+
+.container-page img{
+    width: 40%;
+    height: 50%;
+ }
+
+ .container-page {
+    width: 80%;
+    color: white;
+ }

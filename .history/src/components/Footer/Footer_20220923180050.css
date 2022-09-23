@@ -1,0 +1,13 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 1px solid white;
+    color: white
+}
+
+.social-icon {
+    display: inline-block;
+    margin-left: 14px;
+}
