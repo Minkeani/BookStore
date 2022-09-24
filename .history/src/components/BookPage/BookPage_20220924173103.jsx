@@ -9,17 +9,17 @@ import AnotherBook from "../AnotherBook/AnotherBook";
 const BookPage = () => {
   const book = useSelector((state) => state.current.currentBook);
 
-  
+  if (!book) return <div className="empty"></div>;
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/`);
+    navigate(`/app/`);
   };
-  if (!book) return (<div className="empty"></div>)
+
   return (
     <div className="container">
       <div className="container-page">
-        <button className="back-btn" onClick={handleClick}>← Назад</button>
+        <button onClick={handleClick}>← Назад</button>
         <h1>{book.title}</h1>
         <img src={book.image} alt="" />
         {book.genres.map((genre) => (

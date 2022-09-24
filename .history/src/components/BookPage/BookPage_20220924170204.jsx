@@ -3,23 +3,20 @@ import BookGenre from "../BookGenre/BookGenre";
 import BookBuy from "../BookBuy/BookBuy";
 import { useSelector } from "react-redux";
 import "./BookPage.css";
-import { useNavigate } from "react-router-dom";
 import MyBook from "../Book/MyBook";
 import AnotherBook from "../AnotherBook/AnotherBook";
 const BookPage = () => {
   const book = useSelector((state) => state.current.currentBook);
 
-  
-  const navigate = useNavigate();
+  if (!book) return (
+    <div className="empty">
 
-  const handleClick = () => {
-    navigate(`/`);
-  };
-  if (!book) return (<div className="empty"></div>)
+    </div>
+  );
+
   return (
     <div className="container">
       <div className="container-page">
-        <button className="back-btn" onClick={handleClick}>← Назад</button>
         <h1>{book.title}</h1>
         <img src={book.image} alt="" />
         {book.genres.map((genre) => (
@@ -41,7 +38,7 @@ const BookPage = () => {
         <h2>Почитайте</h2>
         {book ? <MyBook book={book} /> : ""}
         <h2>Другие книги</h2>
-        <AnotherBook />
+        <AnotherBook/>
       </div>
     </div>
   );

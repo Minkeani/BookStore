@@ -22,9 +22,6 @@ const AnotherBook = () => {
   };
 
   return (
-    <div className="container">
-
-    
     <Swiper
     pagination={pagination}
     modules={[Pagination]}
@@ -38,7 +35,6 @@ const AnotherBook = () => {
         </SwiperSlide>
       ))}
     </Swiper>
-    </div>
   );
 };
 

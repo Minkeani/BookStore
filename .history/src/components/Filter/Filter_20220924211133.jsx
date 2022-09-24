@@ -36,19 +36,19 @@ const Filter = ({
     <nav className={styles.Navigate} id="project">
       <ul>
         <li
-          className={active === "Цена ↓" ? styles.active : ""}
+          className={active === "Цена ↓" ? "active" : ""}
           onClick={() => handleClick("Цена ↓")}
         >
           Цена ↓
         </li>
         <li
-          className={active === "Название" ? styles.active  : ""}
+          className={active === "Название" ? "active" : ""}
           onClick={() => handleClick("Название")}
         >
           Название
         </li>
         <li
-          className={active === "Автор" ? styles.active  : ""}
+          className={active === "Автор" ? "active" : ""}
           onClick={() => handleClick("Автор")}
         >
           Автор

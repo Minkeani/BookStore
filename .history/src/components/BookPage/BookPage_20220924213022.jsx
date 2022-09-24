@@ -19,7 +19,7 @@ const BookPage = () => {
   return (
     <div className="container">
       <div className="container-page">
-        <button className="back-btn" onClick={handleClick}>← Назад</button>
+        <button onClick={handleClick}>← Назад</button>
         <h1>{book.title}</h1>
         <img src={book.image} alt="" />
         {book.genres.map((genre) => (

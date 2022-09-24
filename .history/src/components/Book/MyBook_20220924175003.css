@@ -10,17 +10,18 @@
 }
 
 .demoPage {
-    display: flex;
+    display: flex!important;
     border: 1px solid black!important;
     background: white!important;
     color: black!important;
+    box-shadow: 0 0 1px 3px #000 inset!important;
     box-shadow: 0 0 5px black!important;
 }
 
 .demoPage span{
     height: 100%!important;
     border-top: 0.2px solid black;
-    margin: 10px!important;
+    margin: 20px!important;
 }
 @media (max-width: 1020px) {
     .book {

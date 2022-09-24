@@ -17,14 +17,11 @@ const AnotherBook = () => {
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
-      return '<span class="'  + className + '">' + (index + 1) + "</span>";
+      return '<span class="' + 'pag'  + className + '">' + (index + 1) + "</span>";
     },
   };
 
   return (
-    <div className="container">
-
-    
     <Swiper
     pagination={pagination}
     modules={[Pagination]}
@@ -38,7 +35,6 @@ const AnotherBook = () => {
         </SwiperSlide>
       ))}
     </Swiper>
-    </div>
   );
 };
 

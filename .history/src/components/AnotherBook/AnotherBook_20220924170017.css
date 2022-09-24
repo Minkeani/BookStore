@@ -1,0 +1,9 @@
+.mySwiper {
+    width: 90vw;
+    min-height: 600px;
+}
+
+.swiper-pagination-bullet {
+    margin: 10px!important;
+
+ }

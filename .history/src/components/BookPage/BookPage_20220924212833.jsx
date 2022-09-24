@@ -9,13 +9,13 @@ import AnotherBook from "../AnotherBook/AnotherBook";
 const BookPage = () => {
   const book = useSelector((state) => state.current.currentBook);
 
-  
+  if (!book) return <div className="empty"></div>;
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate(`/`);
   };
-  if (!book) return (<div className="empty"></div>)
+
   return (
     <div className="container">
       <div className="container-page">

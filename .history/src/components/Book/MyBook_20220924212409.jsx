@@ -12,7 +12,7 @@ const MyBook = ({ book }) => {
   return (
     <HTMLFlipBook className="book" width={500} height={700}>
         {book.text.map(page  => 
-            <div key={uniqid()} className="demoPage"><span>{page}</span></div>
+            <div key={uniqid()} className="demoPage">{page}</div>
         )}
       
     </HTMLFlipBook>

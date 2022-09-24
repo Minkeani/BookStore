@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSelector } from "react-redux";
 import BookItem from "../BookItem/BookItem";
-import './AnotherBook.css'
 import uniqid from "uniqid";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -17,28 +16,26 @@ const AnotherBook = () => {
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
-      return '<span class="'  + className + '">' + (index + 1) + "</span>";
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
     },
   };
 
   return (
-    <div className="container">
-
-    
     <Swiper
-    pagination={pagination}
-    modules={[Pagination]}
-    className="mySwiper"
-    slidesPerView={3}
-
-  >
+      slidesPerView={3}
+      spaceBetween={30}
+      pagination={{
+        clickable: true,
+      }}
+      modules={[Pagination]}
+      className="mySwiper"
+    >
       {Books.map((book) => (
         <SwiperSlide key={uniqid()} className="swiper-item">
           <BookItem book={book} key={uniqid()} />
         </SwiperSlide>
       ))}
     </Swiper>
-    </div>
   );
 };
 

@@ -10,18 +10,15 @@
 }
 
 .demoPage {
-    display: flex;
-    border: 1px solid black!important;
-    background: white!important;
-    color: black!important;
-    box-shadow: 0 0 5px black!important;
+    display: flex!important;
+    align-items:center!important;;
+    border: 1px solid black!important;;
+    background: white!important;;
+    color: black!important;;
+    justify-content: center!important;;
+    box-shadow: 0 0 5px black!important;;
 }
 
-.demoPage span{
-    height: 100%!important;
-    border-top: 0.2px solid black;
-    margin: 10px!important;
-}
 @media (max-width: 1020px) {
     .book {
         display: none!important;

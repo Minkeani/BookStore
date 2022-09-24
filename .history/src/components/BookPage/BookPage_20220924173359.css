@@ -6,7 +6,7 @@
     flex-direction: column
 }
 
-.container-page .back-btn{
+.container-page button{
     align-self: flex-start;
     margin: 25px;
     background: transparent;
