@@ -1,22 +1,44 @@
-import React from "react";
+import React, { useState } from 'react';
 import './MyBook.css'
-import uniqid from 'uniqid'
-import HTMLFlipBook from "react-pageflip";
+import  { Document, Page, pdfjs } from "react-pdf";
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-const MyBook = ({ book }) => {
 
-    // book.text.map(item => {
-    //     console.log(item);
-    // })
 
+function MyBook({book, start}) {
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(start);
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
+
+  const prev = () => {
+    if(pageNumber !== 1) {
+      setPageNumber(pageNumber - 1)
+    }
+  }
+
+  const next = () => {
+    if(pageNumber !== numPages) {
+      setPageNumber(pageNumber + 1)
+    }
+    else {
+      setPageNumber(1)
+    }
+  }
   return (
-    <HTMLFlipBook className="book" width={500} height={700}>
-        {book.text.map(page  => 
-            <div key={uniqid()} className="demoPage"><span>{page}</span></div>
-        )}
-      
-    </HTMLFlipBook>
+    <div className='book'>
+      <Document  file={book} onLoadSuccess={onDocumentLoadSuccess}>
+        <Page pageNumber={pageNumber} />
+      </Document>
+      <p>
+        Page {pageNumber} of {numPages}
+      </p>
+      <button onClick={prev}>Предыдущая</button>
+      <button onClick={next}>Следущая</button>
+    </div>
   );
-};
+}
 
 export default MyBook;

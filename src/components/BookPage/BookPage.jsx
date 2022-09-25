@@ -32,14 +32,14 @@ const BookPage = () => {
         <h2>Обязательно посмотрите видео о книге</h2>
         <iframe
           width="90%"
-          height="500px"
+          height="500px" 
           src={book.video}
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        ></iframe>
+        ></iframe> 
         <h2>Почитайте</h2>
-        {book ? <MyBook book={book} /> : ""}
+        {book.pdf ? <MyBook book={book.pdf} start={1} /> : ""} 
         <h2>Другие книги</h2>
         <AnotherBook />
       </div>
